@@ -1,0 +1,162 @@
+@import-normalize;
+
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  min-height: 100%;
+  display: flex;
+  padding: 20px;
+}
+
+.wrapper {
+  margin: auto;
+  border-radius: 5px;
+  max-width: 500px;
+  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.286);
+  width: 100%;
+}
+
+.add {
+  padding: 20px 20px 20px 10px;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
+
+.add__input {
+  margin-left: 10px;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.add__icon {
+  color: gray;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.add__icon.active {
+  color: #000;
+}
+
+.no-spicok {
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: gray;
+}
+
+.spicok {
+  min-height: 212px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.spicok__elem {
+  padding: 20px 20px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.spicok__elem.bg-green {
+  background-color: #f7ffeb;
+}
+
+.spicok__elem-title {
+  flex-grow: 1;
+  margin-left: 10px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.spicok__elem-title.decoration {
+  text-decoration: line-through;
+  color: gray
+}
+
+.spicok__btn-done {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  line-height: 1;
+  font-size: 0;
+  cursor: pointer;
+  color: gray;
+  flex-shrink: 0;
+}
+
+.spicok__btn-done:hover {
+  color: #000;
+}
+
+.spicok__btn-done.green {
+  color: #b6efad;
+}
+
+.spicok__btn-done svg {
+  width: 30px;
+  height: 30px;
+}
+
+.spicok__btn-remove {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  line-height: 1;
+  font-size: 0;
+  cursor: pointer;
+  color: gray
+}
+
+.spicok__btn-remove:hover {
+  color: #000;
+}
+
+.spicok__btn-remove svg {
+  width: 30px;
+  height: 30px;
+}
+
+.bottom {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.bottom__count-left {
+  font-size: 16px;
+  color: gray;
+}
+
