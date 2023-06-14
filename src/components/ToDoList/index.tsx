@@ -1,10 +1,9 @@
 import useToDoStore from "../../store/useTodoStore";
 import ToDoItem from "./ToDoItem";
+import { getTasks } from '../../store/helper/getTasks';
 
 const ToDoList = () => {
-  const tasks = useToDoStore((state) => state.tasks);
-
-  console.log(tasks)
+  const tasks = useToDoStore(getTasks);
 
   return (
     <ul className="spicok">

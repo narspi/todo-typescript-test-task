@@ -1,19 +1,6 @@
 import { create } from "zustand";
 import uniqid from 'uniqid';
-
-interface Task {
-    id: string;
-    title: string;
-    done: boolean;
-}
-
-interface ToDoStore {
-    tasks: Task[];
-    view: 'all' | 'acitve' | 'completed';
-    createTask: (title: string) => void;
-    updateTaskDone: (id:string) => void;
-   
-}
+import { ToDoStore } from "./types";
 
 const useToDoStore = create<ToDoStore>((set,get) => ({
     tasks: [],
@@ -38,6 +25,19 @@ const useToDoStore = create<ToDoStore>((set,get) => ({
                 ...task,
                 done: task.id === id? true : task.done
             }))
+        })
+    },
+    deleteCompletedTasks: () => {
+        const { tasks } = get();
+
+        set({
+            tasks: tasks.filter((task)=>task.done === false)
+        })
+    },
+    setView: (view) => {
+        console.log('click')
+        set({
+            view: view
         })
     }
 }));
